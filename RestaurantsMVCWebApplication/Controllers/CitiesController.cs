@@ -84,6 +84,9 @@ namespace RestaurantsMVCWebApplication.Controllers
         public IActionResult Create()
         {
             ViewData["CountryId"] = new SelectList(_context.Countries, "CountryId", "Name");
+
+            ViewData["CountryName"] = new SelectList(_context.Countries, "CountryId", "Name");
+            
             return View();
         }
 
@@ -101,6 +104,9 @@ namespace RestaurantsMVCWebApplication.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CountryId"] = new SelectList(_context.Countries, "CountryId", "Name", city.CountryId);
+
+            ViewData["CountryName"] = new SelectList(_context.Countries, "CountryId", "Name", city.CountryId);
+            
             return View(city);
         }
 
@@ -118,6 +124,9 @@ namespace RestaurantsMVCWebApplication.Controllers
                 return NotFound();
             }
             ViewData["CountryId"] = new SelectList(_context.Countries, "CountryId", "Name", city.CountryId);
+
+            ViewData["CountryName"] = new SelectList(_context.Countries, "CountryId", "Name", city.CountryId);
+
             return View(city);
         }
 
@@ -154,6 +163,9 @@ namespace RestaurantsMVCWebApplication.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CountryId"] = new SelectList(_context.Countries, "CountryId", "Name", city.CountryId);
+
+            ViewData["CountryName"] = new SelectList(_context.Countries, "CountryId", "Name", city.CountryId);
+
             return View(city);
         }
 
