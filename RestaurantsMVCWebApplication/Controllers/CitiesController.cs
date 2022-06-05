@@ -97,6 +97,14 @@ namespace RestaurantsMVCWebApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CityId,CountryId,Name")] City city)
         {
+            List<City> tcl = (from c in _context.Cities
+                              where c.Name == city.Name && c.CountryId == city.CountryId
+                              select c).ToList();
+            if (tcl.Count != 0)
+            {
+                ModelState.AddModelError("Name", "THIS CITY ALREADY EXIST IN THIS COUNTRY");
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(city);
