@@ -33,7 +33,7 @@
             @Html.DisplayNameFor(model => model.Chef)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Chef.FirstName)
+            @Html.DisplayFor(model => model.Chef.FullName)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.City)
@@ -49,9 +49,9 @@
         </dd>
     </dl>
     
-    <form asp-action="Delete">
+    <form asp-action="DELETE">
         <input type="hidden" asp-for="RestaurantId" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index">BACK TO LIST</a>
     </form>
 </div>

@@ -52,6 +52,11 @@ namespace RestaurantsMVCWebApplication.Controllers
             ViewData["ChefId"] = new SelectList(_context.Chefs, "ChefId", "FirstName");
             ViewData["CityId"] = new SelectList(_context.Cities, "CityId", "Name");
             ViewData["IconicDishId"] = new SelectList(_context.Dishes, "DishId", "Name");
+
+            ViewData["ChefName"] = new SelectList(_context.Chefs, "ChefId", "FullName");
+            ViewData["CityName"] = new SelectList(_context.Cities, "CityId", "Name");
+            ViewData["IconicDishName"] = new SelectList(_context.Dishes, "DishId", "Name");
+
             return View();
         }
 
@@ -62,6 +67,18 @@ namespace RestaurantsMVCWebApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("RestaurantId,Name,CityId,CorrectAdress,MainThemeDefenition,IconicDishId,ChefId")] Restaurant restaurant)
         {
+            List<Restaurant> tr = (from r in _context.Restaurants
+                                   where r.Name == restaurant.Name &&
+                                   r.CityId == restaurant.CityId &&
+                                   r.CorrectAdress == restaurant.CorrectAdress
+                                   select r).ToList();
+            if (tr.Count != 0)
+            {
+                ModelState.AddModelError("Name", "THIS RESTAURANT ALREADY EXIST IN THIS CITY BY THIS ADDRESS");
+                ModelState.AddModelError("CityId", "THIS RESTAURANT ALREADY EXIST IN THIS CITY BY THIS ADDRESS");
+                ModelState.AddModelError("CorrectAdress", "THIS RESTAURANT ALREADY EXIST IN THIS CITY BY THIS ADDRESS");
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(restaurant);
@@ -71,6 +88,11 @@ namespace RestaurantsMVCWebApplication.Controllers
             ViewData["ChefId"] = new SelectList(_context.Chefs, "ChefId", "FirstName", restaurant.ChefId);
             ViewData["CityId"] = new SelectList(_context.Cities, "CityId", "Name", restaurant.CityId);
             ViewData["IconicDishId"] = new SelectList(_context.Dishes, "DishId", "Name", restaurant.IconicDishId);
+
+            ViewData["ChefName"] = new SelectList(_context.Chefs, "ChefId", "FullName", restaurant.ChefId);
+            ViewData["CityName"] = new SelectList(_context.Cities, "CityId", "Name", restaurant.CityId);
+            ViewData["IconicDishName"] = new SelectList(_context.Dishes, "DishId", "Name", restaurant.IconicDishId);
+
             return View(restaurant);
         }
 
@@ -90,6 +112,12 @@ namespace RestaurantsMVCWebApplication.Controllers
             ViewData["ChefId"] = new SelectList(_context.Chefs, "ChefId", "FirstName", restaurant.ChefId);
             ViewData["CityId"] = new SelectList(_context.Cities, "CityId", "Name", restaurant.CityId);
             ViewData["IconicDishId"] = new SelectList(_context.Dishes, "DishId", "Name", restaurant.IconicDishId);
+
+
+            ViewData["ChefName"] = new SelectList(_context.Chefs, "ChefId", "FullName", restaurant.ChefId);
+            ViewData["CityName"] = new SelectList(_context.Cities, "CityId", "Name", restaurant.CityId);
+            ViewData["IconicDishName"] = new SelectList(_context.Dishes, "DishId", "Name", restaurant.IconicDishId);
+
             return View(restaurant);
         }
 
@@ -128,6 +156,11 @@ namespace RestaurantsMVCWebApplication.Controllers
             ViewData["ChefId"] = new SelectList(_context.Chefs, "ChefId", "FirstName", restaurant.ChefId);
             ViewData["CityId"] = new SelectList(_context.Cities, "CityId", "Name", restaurant.CityId);
             ViewData["IconicDishId"] = new SelectList(_context.Dishes, "DishId", "Name", restaurant.IconicDishId);
+
+            ViewData["ChefName"] = new SelectList(_context.Chefs, "ChefId", "FullName", restaurant.ChefId);
+            ViewData["CityName"] = new SelectList(_context.Cities, "CityId", "Name", restaurant.CityId);
+            ViewData["IconicDishName"] = new SelectList(_context.Dishes, "DishId", "Name", restaurant.IconicDishId);
+
             return View(restaurant);
         }
 
