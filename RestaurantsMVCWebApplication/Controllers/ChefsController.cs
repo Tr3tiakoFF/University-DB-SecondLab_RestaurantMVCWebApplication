@@ -70,6 +70,9 @@ namespace RestaurantsMVCWebApplication.Controllers
         public IActionResult Create()
         {
             ViewData["BirthCityId"] = new SelectList(_context.Cities, "CityId", "Name");
+
+            ViewData["BirthCityName"] = new SelectList(_context.Cities, "CityId", "Name");
+
             return View();
         }
 
@@ -87,6 +90,9 @@ namespace RestaurantsMVCWebApplication.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["BirthCityId"] = new SelectList(_context.Cities, "CityId", "Name", chef.BirthCityId);
+
+            ViewData["BirthCityName"] = new SelectList(_context.Cities, "CityId", "Name", chef.BirthCityId);
+
             return View(chef);
         }
 
@@ -104,6 +110,9 @@ namespace RestaurantsMVCWebApplication.Controllers
                 return NotFound();
             }
             ViewData["BirthCityId"] = new SelectList(_context.Cities, "CityId", "Name", chef.BirthCityId);
+
+            ViewData["BirthCityName"] = new SelectList(_context.Cities, "CityId", "Name", chef.BirthCityId);
+             
             return View(chef);
         }
 
@@ -140,6 +149,9 @@ namespace RestaurantsMVCWebApplication.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["BirthCityId"] = new SelectList(_context.Cities, "CityId", "Name", chef.BirthCityId);
+
+            ViewData["BirthCityName"] = new SelectList(_context.Cities, "CityId", "Name", chef.BirthCityId);
+             
             return View(chef);
         }
 
