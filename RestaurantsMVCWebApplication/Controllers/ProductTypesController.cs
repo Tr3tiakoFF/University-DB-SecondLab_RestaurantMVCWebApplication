@@ -76,6 +76,13 @@ namespace RestaurantsMVCWebApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProductTypeId,Name")] ProductType productType)
         {
+            List<ProductType> pt = (from t in _context.ProductTypes
+                                    where t.Name == productType.Name
+                                    select t).ToList();
+            if (pt.Count != 0)
+            {
+                ModelState.AddModelError("Name", "THIS PRODUCT TYPE ALREADY EXIST");
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(productType);
