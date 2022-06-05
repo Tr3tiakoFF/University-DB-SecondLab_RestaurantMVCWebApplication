@@ -1,0 +1,36 @@
+﻿@model RestaurantWebApplication.Dish
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Html.DisplayFor(model => model.Name)</h1>
+
+<div>
+    <h6>
+        @Html.DisplayFor(model => model.Description)
+    </h6>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-12">
+            <Text>PRODUCTS:</Text>
+        </dt>        
+        @foreach(var prod in ViewBag.Products)
+        {
+            <dd class = "col-sm-12">
+                <Text>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @prod.Name                
+                </Text>
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    @if (User.IsInRole("admin"))
+    {
+        <a asp-action="Edit" asp-route-id="@Model?.DishId">EDIT</a> 
+        <text> | </text>
+    }
+    <a asp-action="Index">DISH LIST</a>
+</div>

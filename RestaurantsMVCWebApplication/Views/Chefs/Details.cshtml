@@ -1,0 +1,54 @@
+﻿@model RestaurantWebApplication.Chef
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+@{
+    string chefsName = Model.FirstName + " " + 
+        Model.MiddleName + " " + 
+        Model.LastName;
+}
+<h1>@Html.DisplayFor(model => chefsName)</h1>
+
+<div>
+    <h6>
+        @{
+            string birthAddress = Model.BirthCity.Name;
+        }
+        @Html.DisplayFor(model => birthAddress)
+        @if (User.IsInRole("admin"))
+        {
+            <text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;</text>
+            <a asp-action="Edit" asp-route-id="@Model?.ChefId">EDIT</a>
+        }
+    </h6>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-12">
+            <Text>WORKING IN:</Text>
+        </dt>
+        @foreach(var restaurant in ViewBag.Restaurants)
+        {   
+            <dd class = "col-sm-5">
+                <Text>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @restaurant.Name
+                </Text>
+            </dd>
+            <dd class = "col-sm-7">
+                <a asp-action="RestaurantDetails" asp-route-id="@restaurant.RestaurantId">DETAILS</a>
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    <dl class = "row">
+    </dl>
+    <dl class = "row">
+        <dt class = "col-sm-5">
+        </dt>
+        <dt class = "col-sm-7">
+            <a asp-action="Index">CHEF LIST</a>
+        </dt>
+    </dl>

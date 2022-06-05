@@ -1,0 +1,204 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = RestaurantsMVCWebApplication
+build_property.RootNamespace = RestaurantsMVCWebApplication
+build_property.ProjectDir = E:\WebApps\University\DB\Samples\Restaurants\RestaurantsMVCWebApplication\RestaurantsMVCWebApplication\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\WebApps\University\DB\Samples\Restaurants\RestaurantsMVCWebApplication\RestaurantsMVCWebApplication
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Chefs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlZnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Chefs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlZnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Chefs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlZnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Chefs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlZnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Chefs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlZnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Cities/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Cities/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Cities/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aWVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Cities/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Cities/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Countries/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyaWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Countries/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyaWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Countries/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyaWVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Countries/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyaWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Countries/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyaWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/DishesProducts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaGVzUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/DishesProducts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaGVzUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/DishesProducts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaGVzUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/DishesProducts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaGVzUHJvZHVjdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/DishesProducts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaGVzUHJvZHVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Dishes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Dishes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Dishes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Dishes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Dishes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Products/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Products/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Products/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Products/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/ProductTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFR5cGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/ProductTypes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFR5cGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/ProductTypes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFR5cGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/ProductTypes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFR5cGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/ProductTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFR5cGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Restaurants/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Restaurants/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Restaurants/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Restaurants/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Restaurants/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fv47rjmgcg

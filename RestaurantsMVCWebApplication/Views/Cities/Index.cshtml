@@ -1,0 +1,53 @@
+﻿@model IEnumerable<RestaurantWebApplication.City>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>CITIES</h1>
+
+<p>
+    <a asp-action="Create">CREATE NEW</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in ViewBag.CitiesWithInfo) {
+        <tr>
+            <td>
+                @item.Item1.Name
+            </td>
+            <td>
+                @item.Item1.Country.Name
+            </td>
+            <td class = "col-sm-3">
+            @if(item.Item2.Count == 0)
+            {
+                @if (item.Item3.Count == 0)
+                {
+                    <a asp-action="Delete" asp-route-id="@item.Item1.CityId">DELETE</a>
+                }
+                else
+                {
+                    <i>STILL GOT SOME CHEFS FROM</i>
+                }
+            }
+            else
+            {
+                <i>STILL GOT SOME RESTAURANTS IN</i>
+            }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

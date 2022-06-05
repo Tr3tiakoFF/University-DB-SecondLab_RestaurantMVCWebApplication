@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "HOME";
+}
+
+<div class="text-center">
+    <h1 class="display-4">RESTAURANTS</h1>
+    <p>WEB APPLICATION</p>
+</div>
+
+<form method="get" asp-controller="Restaurants" asp-action="Index">
+    <p align="center">
+        <input type="submit" class="btn btn-primary btn-lg" style="width:200px" value="RESTAURANTS" />
+    </p>
+</form>
+
+<form method="get" asp-controller="Chefs" asp-action="Index" asp-route-id="0">
+    <p align="center">
+        <input type="submit" class="btn btn-primary btn-lg" style="width:200px" value="CHEFS" />
+    </p>
+</form>
+
+<form method="get" asp-controller="Dishes" asp-action="Index">
+    <p align="center">
+        <input type="submit" class="btn btn-primary btn-lg" style="width:200px" value="DISHES" />
+    </p>
+</form>
+
+<form method="get" asp-controller="Products" asp-action="Index" asp-route-id="0">
+    <p align="center">
+        <input type="submit" class="btn btn-primary btn-lg" style="width:200px" value="PRODUCTS" />
+    </p>
+</form>
+
+<form method="get" asp-controller="ProductTypes" asp-action="Index">
+    <p align="center">
+        <input type="submit" class="btn btn-primary btn-lg" style="width:200px" value="PRODUCT TYPES" />
+    </p>
+</form>
+
+<form method="get" asp-controller="Cities" asp-action="Index">
+    <p align="center">
+        <input type="submit" class="btn btn-primary btn-lg" style="width:200px" value="CITIES" />
+    </p>
+</form>
+
+<form method="get" asp-controller="Countries" asp-action="Index">
+    <p align="center">
+        <input type="submit" class="btn btn-primary btn-lg" style="width:200px" value="COUNTRIES" />
+    </p>
+</form>

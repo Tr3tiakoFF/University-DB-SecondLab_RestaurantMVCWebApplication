@@ -1,0 +1,51 @@
+﻿@model IEnumerable<RestaurantWebApplication.Chef>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>CHEFS</h1>
+
+
+<p>
+    <a asp-action="Create">CREATE NEW</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @{
+                    string chefName = "CHEF NAME";
+                }
+                @Html.DisplayFor(model => chefName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var chefWithInfo in ViewBag.ChefsWithInfo) {
+        <tr>
+            <td>
+                @chefWithInfo.Item1.FullName
+            </td>
+                <td class = "col-sm-3">
+                        <a asp-action="Edit" asp-route-id="@chefWithInfo.Item1.ChefId">EDIT</a>
+                        @if(chefWithInfo.Item2.Count == 0)
+                        {
+                            <text> | </text>
+                            <a asp-action="Delete" asp-route-id="@chefWithInfo.Item1.ChefId">DELETE</a>
+                        }
+                        else
+                        {
+                            <text> | </text>
+                            <i>STILL WORKING SOMEWHERE</i>
+                        }
+                </td>
+            <td class = "col-sm-1">
+                <a asp-action="Details" asp-route-id="@chefWithInfo.Item1.ChefId">DETAILS</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,100 @@
+﻿@model RestaurantWebApplication.Restaurant
+
+@Html.HiddenFor(x=>x.Address)
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Html.DisplayFor(model => model.Name)</h1>
+
+<div>
+    <h6>
+        @{
+            string correctAddress =
+                Model.City.Name + ", " +
+                Model.CorrectAdress;
+        }
+        @Html.DisplayFor(model => correctAddress)    
+        @if (User.IsInRole("admin"))
+        {
+            <text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;</text>
+            <a asp-action="Edit" asp-route-id="@Model?.RestaurantId">EDIT</a>
+        }
+    </h6>
+    <hr />
+    <dl class = "row">
+        <dt class = "col-sm-2">
+            @{
+                string restaurantTheme = "RESTAURANT THEME";
+            }
+            @Html.DisplayFor(model => restaurantTheme)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MainThemeDefenition)
+        </dd>
+
+        <dt class = "col-sm-2">
+            @{
+                string restaurantChef = "CHEF";
+            }
+            @Html.DisplayFor(model => restaurantChef)
+        </dt>
+        <dd class = "col-sm-3">
+            @{
+                string chefsName = Model.Chef.FirstName + " " + 
+                    Model.Chef.MiddleName + " " + 
+                    Model.Chef.LastName;
+            }
+            @Html.DisplayFor(model => chefsName)
+        </dd>
+        <dt class = "col-sm-7">
+            <a asp-action="ChefDetails" asp-route-id="@Model.RestaurantId">DETAILS</a>
+        </dt>
+
+        <dt class = "col-sm-5">
+            @{
+                string restaurantMenu = "MENU";
+            }
+            @Html.DisplayFor(model => restaurantMenu)
+        </dt>
+        <dt class = "col-sm-7">
+            <a asp-action="MenuDetails" asp-route-id=@Model.RestaurantId>DETAILS</a>
+        </dt>
+
+        <dt class = "col-sm-2">
+            @{
+                string iconicDish = "ICONIC DISH";
+            }
+            <text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+            @Html.DisplayFor(model => iconicDish)
+        </dt>
+        <dd class = "col-sm-3">
+            @if(Model.IconicDish == null)
+            {
+                string noIconicDish = "No iconic dish";
+                @Html.DisplayFor(model => noIconicDish)
+            }
+            else
+            {   
+                @Html.DisplayFor(model => model.IconicDish.Name)
+            }
+        </dd>
+        <dt class = "col-sm-7">
+            <a asp-action="DishDetails" asp-route-id=@Model.IconicDishId>DETAILS</a>
+        </dt>
+
+    </dl>
+</div>
+
+<div>
+    <dl class = "row">
+    </dl>
+    <dl class = "row">
+        <dt class = "col-sm-5">
+        </dt>
+        <dt class = "col-sm-7">
+            <a asp-action="Index">RESTAURANT LIST</a>
+        </dt>
+    </dl>
+</div>

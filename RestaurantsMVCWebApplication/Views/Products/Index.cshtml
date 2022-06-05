@@ -1,0 +1,48 @@
+﻿@model IEnumerable<RestaurantWebApplication.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>PRODUCTS</h1>
+
+<p>
+    <a asp-action="Create">CREATE NEW</a>
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in ViewBag.ProductWithDishes) {
+        <tr>
+            <td>
+                @item.Item1.Name
+            </td>
+            <td>
+                @item.Item1.ProductType.Name
+            </td>
+            <td>
+                @if(item.Item2.Count == 0)
+                {    
+                    <a asp-action="Delete" asp-route-id="@item.Item1.ProductId">DELETE</a>
+                }
+                else
+                {
+                    <i>STILL EXIST IN SOME DISHES</i>    
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
