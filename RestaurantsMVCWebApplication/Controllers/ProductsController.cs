@@ -67,6 +67,9 @@ namespace RestaurantsMVCWebApplication.Controllers
         public IActionResult Create()
         {
             ViewData["ProductTypeId"] = new SelectList(_context.ProductTypes, "ProductTypeId", "ProductTypeId");
+
+            ViewData["ProductTypeName"] = new SelectList(_context.ProductTypes, "ProductTypeId", "Name");
+
             return View();
         }
 
@@ -101,6 +104,9 @@ namespace RestaurantsMVCWebApplication.Controllers
                 return NotFound();
             }
             ViewData["ProductTypeId"] = new SelectList(_context.ProductTypes, "ProductTypeId", "ProductTypeId", product.ProductTypeId);
+
+            ViewData["ProductTypeName"] = new SelectList(_context.ProductTypes, "ProductTypeId", "Name", product.ProductTypeId);
+
             return View(product);
         }
 
@@ -137,6 +143,9 @@ namespace RestaurantsMVCWebApplication.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["ProductTypeId"] = new SelectList(_context.ProductTypes, "ProductTypeId", "ProductTypeId", product.ProductTypeId);
+
+            ViewData["ProductTypeName"] = new SelectList(_context.ProductTypes, "ProductTypeId", "Name", product.ProductTypeId);
+
             return View(product);
         }
 
