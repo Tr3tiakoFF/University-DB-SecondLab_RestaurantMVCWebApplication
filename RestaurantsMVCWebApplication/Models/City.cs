@@ -19,7 +19,7 @@ namespace RestaurantWebApplication
         public string Name { get; set; } = null!;
 
         [Display(Name = "LOCATION")]
-        public virtual Country Country { get; set; } = null!;
+        public virtual Country? Country { get; set; } = null!;
         public virtual ICollection<Chef> Chefs { get; set; }
         public virtual ICollection<Restaurant> Restaurants { get; set; }
     }

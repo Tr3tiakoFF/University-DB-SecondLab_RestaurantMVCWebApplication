@@ -7,7 +7,7 @@
         public int ProductId { get; set; }
         public string? Amount { get; set; }
 
-        public virtual Dish Dish { get; set; } = null!;
-        public virtual Product Product { get; set; } = null!;
+        public virtual Dish? Dish { get; set; } = null!;
+        public virtual Product? Product { get; set; } = null!;
     }
 }

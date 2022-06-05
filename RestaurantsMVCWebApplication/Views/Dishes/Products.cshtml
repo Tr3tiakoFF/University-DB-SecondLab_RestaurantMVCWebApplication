@@ -1,0 +1,66 @@
+﻿@model RestaurantWebApplication.Dish
+
+<h1>PRODUCT MANAGMENT</h1>
+
+<h4>@Model.Name</h4>
+<hr />
+<div class="row">
+    <dt class = "col-sm-12">
+        <Text>PRODUCTS:</Text>
+    </dt>        
+    @foreach(var prod in ViewBag.DishProductsWithTypes)
+    {
+        @if (ViewBag.DishProducts.Contains(prod.Item1))
+        {
+            <dd class = "col-sm-5">
+                <b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @prod.Item1.Name
+                    (
+                </b>
+                <i>
+                    @prod.Item2.Name
+                </i>
+                <b>
+                    )             
+                </b>
+            </dd>
+            <dd class = "col-sm-5">
+                    <form asp-action="RemoveProduct" asp-route-DishId="@Model.DishId" asp-route-ProductId="@prod.Item1.ProductId" >
+                        <input type="submit" value="REMOVE" class="btn btn-danger" />
+                    </form>
+            </dd>
+        }
+        else
+        {
+            <dd class = "col-sm-5">
+                <b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @prod.Item1.Name
+                    (
+                </b>
+                <i>
+                    @prod.Item2.Name
+                </i>
+                <b>
+                    )             
+                </b>
+            </dd>
+            <dd class = "col-sm-5">
+                <form asp-action="AddProduct" asp-route-DishId="@Model.DishId" asp-route-ProductId="@prod.Item1.ProductId" >
+                    <input type="submit" value="ADD" class="btn btn-success" />
+                </form>
+            </dd>
+        }
+    }
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.DishId">EDIT</a> 
+    <text> | </text>
+    <a asp-action="Details" asp-route-id="@Model?.DishId">DISH DETAILS</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

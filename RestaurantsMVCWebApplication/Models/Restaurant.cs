@@ -41,8 +41,8 @@ namespace RestaurantWebApplication
             get => City == null ? CorrectAdress : City.Name + ", " + CorrectAdress;
         }
 
-        public virtual Chef Chef { get; set; } = null!;
-        public virtual City City { get; set; } = null!;
+        public virtual Chef? Chef { get; set; } = null!;
+        public virtual City? City { get; set; } = null!;
         public virtual Dish? IconicDish { get; set; }
     }
 }

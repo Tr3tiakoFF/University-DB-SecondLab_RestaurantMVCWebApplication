@@ -31,7 +31,7 @@ namespace RestaurantWebApplication
             }
         }
 
-        public virtual City BirthCity { get; set; } = null!;
+        public virtual City? BirthCity { get; set; } = null!;
         public virtual ICollection<Restaurant> Restaurants { get; set; }
     }
 }

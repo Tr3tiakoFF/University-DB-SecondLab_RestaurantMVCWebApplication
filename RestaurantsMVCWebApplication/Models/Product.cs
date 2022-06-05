@@ -18,7 +18,7 @@ namespace RestaurantWebApplication
         public int ProductTypeId { get; set; }
 
         [Display(Name = "PRODUCT TYPE")]
-        public virtual ProductType ProductType { get; set; } = null!;
+        public virtual ProductType? ProductType { get; set; } = null!;
         public virtual ICollection<DishesProduct> DishesProducts { get; set; }
     }
 }
