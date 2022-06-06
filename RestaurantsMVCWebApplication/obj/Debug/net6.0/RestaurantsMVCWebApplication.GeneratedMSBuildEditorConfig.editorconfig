@@ -167,6 +167,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFR5cGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Queries/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlcmllc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Queries/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/WebApps/University/DB/Samples/Restaurants/RestaurantsMVCWebApplication/RestaurantsMVCWebApplication/Views/Restaurants/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
