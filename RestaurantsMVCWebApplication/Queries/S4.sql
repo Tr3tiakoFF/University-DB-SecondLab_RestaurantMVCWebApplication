@@ -3,7 +3,7 @@ WHERE EXISTS (
 	SELECT * FROM Dishes
 	WHERE (
 		SELECT COUNT(*) FROM Dishes_Products
-		WHERE Dishes_Products.DishID = Dishes.DishID) >= X AND
+		WHERE Dishes_Products.DishID = Dishes.DishID) >= @ AND
 	EXISTS (
 		SELECT * FROM Restaurants
 		WHERE Restaurants.ChefID = Chefs.ChefID AND Restaurants.IconicDishID = Dishes.DishID));

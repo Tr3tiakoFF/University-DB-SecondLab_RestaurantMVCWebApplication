@@ -3,4 +3,4 @@ WHERE Restaurants.ChefID IN (
 	SELECT Chefs.ChefID FROM Chefs
 	WHERE Chefs.BirthCityID NOT IN (
 		SELECT Cities.CityID FROM Cities
-		WHERE Cities.Name = X));
+		WHERE Cities.Name = @));

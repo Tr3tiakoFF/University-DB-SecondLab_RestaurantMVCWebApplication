@@ -12,7 +12,7 @@ namespace RestaurantWebApplication
         public DBRestaurantsLiteContext(DbContextOptions<DBRestaurantsLiteContext> options)
             : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         public virtual DbSet<Chef> Chefs { get; set; } = null!;
@@ -165,7 +165,5 @@ namespace RestaurantWebApplication
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-
-        public DbSet<RestaurantsMVCWebApplication.Models.Query>? Query { get; set; }
     }
 }

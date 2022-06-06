@@ -7,7 +7,7 @@ WHERE R.IconicDishID IN (
 			SELECT * FROM Dishes_Products
 			WHERE Dishes_Products.ProductID = Products.ProductID AND Dishes_Products.DishID IN (
 				SELECT Restaurants.IconicDishID FROM Restaurants
-				WHERE Restaurants.Name = X)) AND
+				WHERE Restaurants.Name = @)) AND
 		NOT EXISTS (
 			SELECT * FROM Dishes_Products
 			WHERE Dishes_Products.ProductID = Products.ProductID AND Dishes_Products.DishID = Dishes.DishID)));

@@ -9,4 +9,4 @@ WHERE EXISTS (
 				SELECT Cities.CityID FROM Cities
 				WHERE Cities.CountryID IN (
 					SELECT Countries.CountryID FROM Countries
-					WHERE Countries.Name = X)))));
+					WHERE Countries.Name = @)))));

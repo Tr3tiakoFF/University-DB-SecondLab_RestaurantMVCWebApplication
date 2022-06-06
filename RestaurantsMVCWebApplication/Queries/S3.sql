@@ -3,4 +3,4 @@ WHERE NOT EXISTS (
 	SELECT * FROM Restaurants
 	WHERE Restaurants.IconicDishID = Dishes.DishID AND Restaurants.CityID IN (
 		SELECT Cities.CityID FROM Cities
-		WHERE Cities.Name = X));
+		WHERE Cities.Name = @));
