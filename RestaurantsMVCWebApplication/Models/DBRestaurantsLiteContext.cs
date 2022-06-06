@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RestaurantsMVCWebApplication.Models;
 
 namespace RestaurantWebApplication
 {
@@ -164,5 +165,7 @@ namespace RestaurantWebApplication
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        public DbSet<RestaurantsMVCWebApplication.Models.Query>? Query { get; set; }
     }
 }

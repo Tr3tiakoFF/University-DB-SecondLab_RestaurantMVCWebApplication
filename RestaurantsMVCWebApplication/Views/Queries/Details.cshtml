@@ -1,0 +1,30 @@
+﻿@model RestaurantsMVCWebApplication.Models.Query
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Query</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Error)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Error)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ErrorFlag)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ErrorFlag)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.QueryId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
