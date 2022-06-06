@@ -36,6 +36,7 @@ namespace RestaurantsMVCWebApplication.Controllers
         public async Task<IActionResult> Index()
         {
             ViewData["CountryNames"] = new SelectList(_context.Countries, "Name", "Name");
+            ViewData["CityNames"] = new SelectList(_context.Cities, "Name", "Name");
             ViewData["RestaurantNames"] = new SelectList(_context.Restaurants, "Name", "Name");
 
             return View();
@@ -91,6 +92,218 @@ namespace RestaurantsMVCWebApplication.Controllers
                         while (reader.Read())
                         {
                             queryModel.OUTCityNames.Add(reader.GetString(0));
+                            flag++;
+                        }
+
+                        if (flag == 0)
+                        {
+                            queryModel.ErrorFlag = 1;
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            return RedirectToAction("Details", queryModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SimpleQuery3(Query queryModel)
+        {
+            string query = System.IO.File.ReadAllText(S3_PATH);
+            query = query.Replace("@", "\'" + queryModel.CityName + "\'");
+
+            queryModel.QueryId = "S3";
+
+            using (var connection = new SqlConnection(CONN_STR))
+            {
+                connection.Open();
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        int flag = 0;
+                        while (reader.Read())
+                        {
+                            queryModel.OUTDishNames.Add(reader.GetString(0));
+                            flag++;
+                        }
+
+                        if (flag == 0)
+                        {
+                            queryModel.ErrorFlag = 1;
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            return RedirectToAction("Details", queryModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SimpleQuery4(Query queryModel)
+        {
+            string query = System.IO.File.ReadAllText(S4_PATH);
+            query = query.Replace("@", queryModel.AmountOfProducts.ToString());
+
+            queryModel.QueryId = "S4";
+
+            using (var connection = new SqlConnection(CONN_STR))
+            {
+                connection.Open();
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        int flag = 0;
+                        while (reader.Read())
+                        {
+                            queryModel.OUTChefNames.Add(
+                                reader.GetString(0) + " " +
+                                reader.GetString(1) + " " +
+                                reader.GetString(2));
+                            flag++;
+                        }
+
+                        if (flag == 0)
+                        {
+                            queryModel.ErrorFlag = 1;
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            return RedirectToAction("Details", queryModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SimpleQuery5(Query queryModel)
+        {
+            string query = System.IO.File.ReadAllText(S5_PATH);
+            query = query.Replace("@", "\'" + queryModel.CityName + "\'");
+
+            queryModel.QueryId = "S5";
+
+            using (var connection = new SqlConnection(CONN_STR))
+            {
+                connection.Open();
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        int flag = 0;
+                        while (reader.Read())
+                        {
+                            queryModel.OUTRestaurantNames.Add(reader.GetString(0));
+                            flag++;
+                        }
+
+                        if (flag == 0)
+                        {
+                            queryModel.ErrorFlag = 1;
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            return RedirectToAction("Details", queryModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AdvancedQuery1(Query queryModel)
+        {
+            string query = System.IO.File.ReadAllText(A1_PATH);
+
+            queryModel.QueryId = "A1";
+
+            using (var connection = new SqlConnection(CONN_STR))
+            {
+                connection.Open();
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        int flag = 0;
+                        while (reader.Read())
+                        {
+                            queryModel.OUTCityNames.Add(reader.GetString(0));
+                            flag++;
+                        }
+
+                        if (flag == 0)
+                        {
+                            queryModel.ErrorFlag = 1;
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            return RedirectToAction("Details", queryModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AdvancedQuery2(Query queryModel)
+        {
+            string query = System.IO.File.ReadAllText(A2_PATH);
+            query = query.Replace("@", "\'" + queryModel.RestaurantName + "\'");
+
+            queryModel.QueryId = "A2";
+
+            using (var connection = new SqlConnection(CONN_STR))
+            {
+                connection.Open();
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        int flag = 0;
+                        while (reader.Read())
+                        {
+                            queryModel.OUTRestaurantNames.Add(reader.GetString(0));
+                            flag++;
+                        }
+
+                        if (flag == 0)
+                        {
+                            queryModel.ErrorFlag = 1;
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            return RedirectToAction("Details", queryModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AdvancedQuery3(Query queryModel)
+        {
+            string query = System.IO.File.ReadAllText(A3_PATH);
+            query = query.Replace("@", "\'" + queryModel.CountryName + "\'");
+
+            queryModel.QueryId = "A3";
+
+            using (var connection = new SqlConnection(CONN_STR))
+            {
+                connection.Open();
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        int flag = 0;
+                        while (reader.Read())
+                        {
+                            queryModel.OUTChefNames.Add(reader.GetString(0));
                             flag++;
                         }
 

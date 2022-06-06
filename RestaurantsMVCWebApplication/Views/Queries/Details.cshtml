@@ -4,27 +4,127 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>QUERY RESULT (DETAILS)</h1>
 
-<div>
-    <h4>Query</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Error)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Error)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ErrorFlag)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ErrorFlag)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.QueryId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+@if (string.IsNullOrEmpty(Model.Error))
+{
+    @if (Model.QueryId.Equals("S1"))
+    {
+        <p style="font-size:20px">
+            <b>Amount of restaurants in country @Model.CountryName:</b> @Model.OUTAmountOfRestaurants;
+        </p>
+    }
+    @if (Model.QueryId.Equals("S2"))
+    {
+        <p style="font-size:20px">
+            <b>Cities without restaurant "@Model.RestaurantName":</b>
+        </p>
+        foreach(var c in Model.OUTCityNames)
+        {
+            <dd class = "col-sm-12">
+                <Text>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @c         
+                </Text>
+            </dd>   
+        }
+    }
+    @if (Model.QueryId.Equals("S3"))
+    {
+        <p style="font-size:20px">
+            <b>Dishes that are not serving in @Model.CityName:</b>
+        </p>
+        foreach(var c in Model.OUTDishNames)
+        {
+            <dd class = "col-sm-12">
+                <Text>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @c         
+                </Text>
+            </dd>   
+        }
+    }
+    @if (Model.QueryId.Equals("S4"))
+    {
+        <p style="font-size:20px">
+            <b>Chefs who working in the restaurant, where iconic dish has at least @Model.AmountOfProducts prroducts:</b>
+        </p>
+        foreach(var c in Model.OUTChefNames)
+        {
+            <dd class = "col-sm-12">
+                <Text>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @c         
+                </Text>
+            </dd>   
+        }
+    }
+    @if (Model.QueryId.Equals("S5"))
+    {
+        <p style="font-size:20px">
+            <b>Find restaurants with chefs not from @Model.CityName:</b>
+        </p>
+        foreach(var c in Model.OUTRestaurantNames)
+        {
+            <dd class = "col-sm-12">
+                <Text>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @c         
+                </Text>
+            </dd>   
+        }
+    }
+    @if (Model.QueryId.Equals("A1"))
+    {
+        <p style="font-size:20px">
+            <b>Cities with ALL restaurants:</b>
+        </p>
+        foreach(var c in Model.OUTCityNames)
+        {
+            <dd class = "col-sm-12">
+                <Text>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @c         
+                </Text>
+            </dd>   
+        }
+    }
+    @if (Model.QueryId.Equals("A2"))
+    {
+        <p style="font-size:20px">
+            <b>Restaurants, which iconic dishes consists of at least that products, which are in iconic dish of restaurant "@Model.RestaurantName":</b>
+        </p>
+        foreach(var c in Model.OUTRestaurantNames)
+        {
+            <dd class = "col-sm-12">
+                <Text>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @c         
+                </Text>
+            </dd>   
+        }
+    }
+    @if (Model.QueryId.Equals("A3"))
+    {
+        <p style="font-size:20px">
+            <b>Chefs, who working in restaurants, which are located in cities, where there are ALL of restaurants that are in @Model.CountryName:</b>
+        </p>
+        foreach(var c in Model.OUTChefNames)
+        {
+            <dd class = "col-sm-12">
+                <Text>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @c         
+                </Text>
+            </dd>   
+        }
+    }
+}
+else
+{
+    <p style="font-size:20px">
+        Query result is empty.
+        <br />
+        Tyr with another condition.
+    </p>
+}

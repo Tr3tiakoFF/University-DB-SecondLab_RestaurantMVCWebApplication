@@ -1,41 +1,201 @@
-﻿@model IEnumerable<RestaurantsMVCWebApplication.Models.Query>
+﻿@model Query
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>QUERIES</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<hr />
+<hr />
+<h3>SIMPLE</h3>
+<hr />
+<p style="font-size:20px">
+    <b>QUERY 1</b>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Error)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ErrorFlag)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Error)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ErrorFlag)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.QueryId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.QueryId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.QueryId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<p style="font-size:17px">
+    Find amount of restaurants in country X.
+</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="SimpleQuery1">
+            <div class="form-group">
+                <label class="control-label">Contry name X</label>
+                <select asp-for="CountryName" asp-items="@ViewBag.CountryNames" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="REQUEST" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+
+
+<p style="font-size:20px">
+    <b>QUERY 2</b>
+</p>
+<p style="font-size:17px">
+    Find cities without restaurant X.
+</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="SimpleQuery2">
+            <div class="form-group">
+                <label class="control-label">Restaurant name X</label>
+                <select asp-for="RestaurantName" asp-items="@ViewBag.RestaurantNames" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="REQUEST" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+
+
+<p style="font-size:20px">
+    <b>QUERY 3</b>
+</p>
+<p style="font-size:17px">
+    Find dishes that are not serving in city X.
+</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="SimpleQuery3">
+            <div class="form-group">
+                <label class="control-label">City name X</label>
+                <select asp-for="CityName" asp-items="@ViewBag.CityNames" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="REQUEST" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+
+
+<p style="font-size:20px">
+    <b>QUERY 4</b>
+</p>
+<p style="font-size:17px">
+    Find chefs who working in the restaurant, where iconic dish has at least of X prroducts.
+</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="SimpleQuery4">
+            <div class="form-group">
+                <label asp-for="AmountOfProducts" class="control-label">Amount of products X</label>
+                <input asp-for="AmountOfProducts", class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="REQUEST" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+
+
+
+<p style="font-size:20px">
+    <b>QUERY 5</b>
+</p>
+<p style="font-size:17px">
+    Find restaurants with chefs not from city X.
+</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="SimpleQuery5">
+            <div class="form-group">
+                <label class="control-label">City name X</label>
+                <select asp-for="CityName" asp-items="@ViewBag.CityNames" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="REQUEST" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+
+
+<hr />
+<h3>ADVANCED</h3>
+<hr />
+
+<p style="font-size:20px">
+    <b>QUERY 1</b>
+</p>
+<p style="font-size:17px">
+    Cities with ALL restaurants.
+</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="AdvancedQuery1">
+            <div class="form-group">
+                <input type="submit" value="REQUEST" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+
+<p style="font-size:20px">
+    <b>QUERY 2</b>
+</p>
+<p style="font-size:17px">
+    Find restaurants, which iconic dishes consists of at least that products, which are in iconic dish of restaurant X.
+</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="AdvancedQuery2">
+            <div class="form-group">
+                <label class="control-label">Restaurant name X</label>
+                <select asp-for="RestaurantName" asp-items="@ViewBag.RestaurantNames" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="REQUEST" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+
+<p style="font-size:20px">
+    <b>QUERY 3</b>
+</p>
+<p style="font-size:17px">
+    Find chefs, who working in restaurants, which are located in cities, where there are ALL of restaurants that are in contry X.
+</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="AdvancedQuery3">
+            <div class="form-group">
+                <label class="control-label">Contry name X</label>
+                <select asp-for="CountryName" asp-items="@ViewBag.CountryNames" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="REQUEST" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
